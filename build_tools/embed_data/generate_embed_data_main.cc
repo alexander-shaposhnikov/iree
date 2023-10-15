@@ -159,7 +159,7 @@ static bool GenerateImpl(const std::string& identifier,
       size_t line_length = std::min(remaining_length, kMaxBytesPerLine);
       for (size_t j = 0; j < line_length; ++j) {
         char c = contents[remaining_offset + j];
-        f << std::to_string((uint8_t)c) << ",";
+        f << std::to_string((unsigned char)c) << ",";
       }
       f << "\n";
       remaining_offset += line_length;
